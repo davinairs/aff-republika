@@ -1,0 +1,511 @@
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+}
+.navbar {
+  background-color: #9e1b1e;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navbar-top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+.navbar-brand {
+  margin-right: auto;
+}
+.navbar-brand img {
+  height: 36px;
+  width: auto;
+}
+.search-bar {
+  margin-left: auto;
+  margin-right: 24px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  max-width: 250px;
+  min-width: 150px;
+  flex: 1;
+}
+
+.nav-links {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 24px;
+  padding: 0 32px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.main-container {
+  margin: 0 100px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 20px 0;
+}
+
+/* Styling untuk search bar Bootstrap */
+.input-group {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: 24px;
+}
+
+.form-control {
+  border-radius: 20px;
+  border: none;
+  padding: 8px 16px;
+  padding-right: 40px;
+}
+
+.btn-outline-light {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  border: none;
+  background: transparent;
+  color: #9e1b1e;
+  padding: 8px 12px;
+}
+
+.btn-outline-light:hover {
+  background: transparent;
+  color: #7a1618;
+}
+
+/* Menu toggle styling */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 16px;
+  order: 2;
+}
+
+/* Styling untuk jadwal pertandingan */
+.match-schedule {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  margin-bottom: 40px;
+}
+
+.schedule-container {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  padding: 10px;
+}
+
+.schedule-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.match-card {
+  min-width: 250px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.match-time {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+  text-align: left;
+  padding: 6px;
+}
+
+.match-teams {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.team {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 2px;
+}
+
+.team span {
+  padding: 2px;
+}
+
+.flag {
+  width: 30px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 2px;
+  padding: 4px;
+}
+
+.standings-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+
+.standings-group {
+  flex: 1;
+  min-width: 300px;
+  max-width: 650px;
+}
+
+.standings-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.standings-table th,
+.standings-table td {
+  padding: 12px 8px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.standings-table th {
+  background: #f5f5f5;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.team-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 12px;
+  min-width: 120px;
+}
+
+.team-info .flag {
+  width: 24px;
+  height: 16px;
+  object-fit: cover;
+}
+
+.team-info span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Header Visual */
+.visual {
+  font-size: 20px;
+  color: #333;
+
+}
+
+.visual-wrapper { 
+  flex-wrap: wrap; 
+  width: 50%;
+  margin: 0 0 40px 0;
+}
+
+.visual-image {
+  width: 100%; /* Membuat gambar responsif */
+  height: auto;
+}
+
+.deskripsi {
+  font-size: 16px;
+  color: #777;
+  font-style: italic;
+}
+
+/* Styling untuk slider */
+.slider {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 10px;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.slide-image {
+  min-width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0.5;
+}
+
+.newest {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+}
+
+.news-container {
+  display: flex; 
+  width: 50%;
+  margin: 0 0 40px 0;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.news-image {
+  width: 40%;
+  object-fit: cover;
+  border-radius: 6%;
+  margin-right: 20px; /* Jarak antara gambar dan teks */
+}
+
+.news-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1; /* Memastikan konten teks mengambil ruang sisa */
+}
+
+.news-title {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.news-upload {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Bagian Trending */
+.trending {
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+}
+
+/* Wrapper berita terbaru */
+.news-wrapper { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 15px;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 0 40px 0;
+}
+
+/* Berita Box */
+.news-box { 
+  width: 23%; 
+  background-color: #fff;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 6%;
+  margin-bottom: 15px;
+}
+
+/* Gambar Berita */
+.news-box .news-image { 
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 3%;
+}
+
+/* Judul Berita */
+.news-box .news-title { 
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Styling untuk title */
+.title {
+  font-size: 32px; /* Ukuran h2 untuk layar besar */
+  font-weight: bold;
+  margin: 40px 0;
+  color: #333;
+}
+
+/* Media query untuk mobile <= 426px */
+@media (max-width: 426px) {
+  /* Navigation */
+  .nav-links {
+    display: none;
+  }
+
+  .input-group {
+    display: none; /* Sembunyikan search bar */
+  }
+  
+  .navbar {
+    padding: 8px;
+  }
+  
+  .navbar-top {
+    padding: 0 8px;
+  }
+  
+  .menu-toggle {
+    display: block;
+    padding: 8px;
+  }
+
+  /* Container */
+  .main-container {
+    margin: 0 20px;
+    padding: 8px 0;
+  }
+
+  /* Title */
+  .title {
+    margin: 16px 0;
+    font-size: 18px;
+  }
+
+  /* Match Schedule */
+  .match-schedule {
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+
+  .schedule-container {
+    padding: 8px 0;
+  }
+
+  .match-card {
+    min-width: 200px;
+    padding: 8px;
+  }
+
+  .match-time {
+    padding: 4px;
+    margin-bottom: 8px;
+  }
+
+  .team {
+    padding: 4px;
+  }
+
+  /* Standings */
+  .standings-container {
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+
+  .standings-table th,
+  .standings-table td {
+    padding: 8px 4px;
+  }
+
+  .team-info {
+    padding-left: 8px;
+    gap: 8px;
+  }
+
+  /* Visual & News */
+  .visual-wrapper {
+    padding: 0 8px;
+    width: calc(100% - 16px);
+    margin-bottom: 16px;
+  }
+
+  .deskripsi {
+    font-size: 11px;
+    padding: 8px 0;
+  }
+
+  .news-container {
+    padding: 0 8px;
+    width: calc(100% - 16px);
+    margin-bottom: 16px;
+  }
+
+  .news-content {
+    padding: 8px;
+  }
+
+  .news-content .news-title {
+    margin-bottom: 8px;
+    font-size: 11px;
+  }
+
+  .news-content .news-upload {
+    font-size: 11px;
+  }
+
+  /* News Grid */
+  .news-wrapper {
+    padding: 0 8px;
+    width: calc(100% - 16px);
+    margin-bottom: 16px;
+    gap: 8px;
+  }
+
+  .news-box {
+    margin-bottom: 8px;
+  }
+
+  .news-box .news-title {
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  /* Slider */
+  .slider {
+    padding: 8px 0;
+    gap: 8px;
+  }
+
+  .slide-image {
+    min-width: 120px;
+    height: 80px;
+    opacity: 0.5;
+  }
+}
