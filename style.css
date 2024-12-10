@@ -1,29 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+/* Global Styles */
 body {
   margin: 0;
   font-family: Poppins, sans-serif;
 }
+
+/* Navbar */
 .navbar {
-  background-color: #9e1b1e;
-  padding: 32px;
+  background: linear-gradient(90deg, #9e1b1e, #d32f2f);
+  padding: 32px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .navbar-top {
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
-  padding: 0 32px;
+  padding: 0 100px;
   box-sizing: border-box;
 }
+
 .navbar-brand {
   margin-right: auto;
 }
+
 .navbar-brand img {
   height: 36px;
   width: auto;
 }
+
 .search-bar {
   margin-left: auto;
   margin-right: 24px;
@@ -39,13 +48,13 @@ body {
 .nav-links {
   display: flex;
   width: 100%;
-  max-width: 1200px;
   margin-top: 24px;
-  padding: 0 32px;
+  padding: 0 100px;
   box-sizing: border-box;
   flex-wrap: wrap;
   gap: 16px 24px;
 }
+
 .nav-link {
   color: white;
   text-decoration: none;
@@ -54,14 +63,6 @@ body {
   white-space: nowrap;
 }
 
-.main-container {
-  margin: 0 100px;
-  max-width: 100%;
-  box-sizing: border-box;
-  padding: 20px 0;
-}
-
-/* Styling untuk search bar Bootstrap */
 .input-group {
   max-width: 300px;
   margin-left: auto;
@@ -90,7 +91,6 @@ body {
   color: #7a1618;
 }
 
-/* Menu toggle styling */
 .menu-toggle {
   display: none;
   font-size: 24px;
@@ -103,12 +103,47 @@ body {
   order: 2;
 }
 
-/* Styling untuk jadwal pertandingan */
+/* Main Container */
+.main-container {
+  margin: 0 100px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+/* Header Section */
+.header-section {
+  position: relative;
+  padding: 20px;
+  background-image: url('image/foto-background.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.header-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1;
+}
+
+.header-section .title,
+.header-section .match-schedule {
+  position: relative;
+  z-index: 2;
+}
+
+/* Match Schedule */
 .match-schedule {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 0;
+  padding: 10px 0;
   overflow: hidden;
   position: relative;
   max-width: 100%;
@@ -117,23 +152,23 @@ body {
 
 .schedule-container {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   padding: 10px;
 }
 
 .schedule-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari and Opera */
+  display: none;
 }
 
 .match-card {
   min-width: 250px;
   padding: 15px;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 4px;
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -171,11 +206,12 @@ body {
   padding: 4px;
 }
 
+/* Standings */
 .standings-container {
   display: flex;
   justify-content: center;
   gap: 20px;
-  padding: 20px 0;
+  padding: 10px 0;
   flex-wrap: wrap;
   max-width: 100%;
   margin: 0 auto;
@@ -215,7 +251,6 @@ body {
   align-items: center;
   gap: 12px;
   padding-left: 12px;
-  min-width: 120px;
 }
 
 .team-info .flag {
@@ -230,22 +265,25 @@ body {
   text-overflow: ellipsis;
 }
 
-/* Header Visual */
+/* Visual Section */
 .visual {
   font-size: 20px;
-  color: #333;
-
+  color: #000;
 }
 
-.visual-wrapper { 
-  flex-wrap: wrap; 
-  width: 50%;
+.visual-wrapper {
+  flex-wrap: wrap;
+  width: 60%;
   margin: 0 0 40px 0;
+  display: inline-block;
+  vertical-align: top;
 }
 
 .visual-image {
-  width: 100%; /* Membuat gambar responsif */
-  height: auto;
+  width: 100%;
+  height: 409px;
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 .deskripsi {
@@ -254,7 +292,6 @@ body {
   font-style: italic;
 }
 
-/* Styling untuk slider */
 .slider {
   display: flex;
   gap: 15px;
@@ -278,30 +315,31 @@ body {
   min-width: 150px;
   height: 100px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   opacity: 0.5;
 }
 
+/* News Section */
 .newest {
   font-size: 20px;
-  color: #333;
+  color: #000;
   margin: 0;
 }
 
 .news-container {
-  display: flex; 
-  width: 50%;
-  margin: 0 0 40px 0;
+  display: flex;
+  width: 60%;
+  margin: 0 0 20px 0;
   background-color: #fff;
   overflow: hidden;
 }
 
 .news-image {
-  width: 40%;
+  width: 50%;
   object-fit: cover;
-  border-radius: 6%;
-  margin-right: 20px; /* Jarak antara gambar dan teks */
+  border-radius: 4px;
+  margin-right: 20px;
 }
 
 .news-content {
@@ -309,12 +347,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex: 1; /* Memastikan konten teks mengambil ruang sisa */
+  flex: 1;
 }
 
 .news-title {
   font-size: 20px;
-  color: #333;
+  color: #000;
   margin-bottom: 10px;
 }
 
@@ -323,95 +361,99 @@ body {
   color: #777;
 }
 
-/* Bagian Trending */
+/* Trending Section */
 .trending {
   font-size: 20px;
-  color: #333;
+  color: #000;
   margin: 0;
 }
 
-/* Wrapper berita terbaru */
-.news-wrapper { 
-  display: flex; 
-  flex-wrap: wrap; 
+/* News Wrapper */
+.news-wrapper {
+  display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   justify-content: space-between;
   width: 100%;
-  margin: 0 0 40px 0;
+  margin: 0 0 20px 0;
 }
 
-/* Berita Box */
-.news-box { 
-  width: 23%; 
+/* News Box */
+.news-box {
+  width: 23%;
   background-color: #fff;
   overflow: hidden;
   text-align: center;
-  border-radius: 6%;
   margin-bottom: 15px;
 }
 
-/* Gambar Berita */
-.news-box .news-image { 
+.news-box .news-image {
   width: 100%;
   height: 150px;
   object-fit: cover;
   border-radius: 3%;
 }
 
-/* Judul Berita */
-.news-box .news-title { 
+.news-box .news-title {
   padding: 10px;
   font-size: 16px;
   color: #333;
 }
 
-/* Styling untuk title */
+/* Title Styling */
 .title {
-  font-size: 32px; /* Ukuran h2 untuk layar besar */
-  font-weight: bold;
+  font-family: Russo One, sans-serif;
+  font-size: 32px;
   margin: 40px 0;
-  color: #333;
+  color: #000;
 }
 
-/* Media query untuk mobile <= 426px */
+.ads-box {
+  width: 336px;
+  height: 280px;
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: top;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Responsive Styles */
 @media (max-width: 426px) {
-  /* Navigation */
   .nav-links {
     display: none;
   }
 
   .input-group {
-    display: none; /* Sembunyikan search bar */
+    display: none;
   }
-  
+
   .navbar {
     padding: 8px;
   }
-  
+
   .navbar-top {
-    padding: 0 8px;
+    padding: 0 4px;
   }
-  
+
   .menu-toggle {
     display: block;
     padding: 8px;
   }
 
-  /* Container */
   .main-container {
     margin: 0 20px;
-    padding: 8px 0;
+    padding: 4px 0;
   }
 
-  /* Title */
   .title {
     margin: 16px 0;
     font-size: 18px;
   }
 
-  /* Match Schedule */
   .match-schedule {
-    padding: 8px;
+    padding: 4px;
     margin-bottom: 16px;
   }
 
@@ -433,9 +475,8 @@ body {
     padding: 4px;
   }
 
-  /* Standings */
   .standings-container {
-    padding: 8px;
+    padding: 4px;
     margin-bottom: 16px;
   }
 
@@ -444,31 +485,22 @@ body {
     padding: 8px 4px;
   }
 
-  .team-info {
-    padding-left: 8px;
-    gap: 8px;
+  .team-info span {
+    display: none;
   }
 
-  /* Visual & News */
   .visual-wrapper {
-    padding: 0 8px;
     width: calc(100% - 16px);
     margin-bottom: 16px;
   }
 
   .deskripsi {
     font-size: 11px;
-    padding: 8px 0;
   }
 
   .news-container {
-    padding: 0 8px;
     width: calc(100% - 16px);
-    margin-bottom: 16px;
-  }
-
-  .news-content {
-    padding: 8px;
+    margin-bottom: 8px;
   }
 
   .news-content .news-title {
@@ -480,11 +512,9 @@ body {
     font-size: 11px;
   }
 
-  /* News Grid */
   .news-wrapper {
-    padding: 0 8px;
     width: calc(100% - 16px);
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     gap: 8px;
   }
 
@@ -497,15 +527,13 @@ body {
     font-size: 11px;
   }
 
-  /* Slider */
+  .visual-image {
+    height: 276px;
+  }
+
   .slider {
     padding: 8px 0;
     gap: 8px;
   }
-
-  .slide-image {
-    min-width: 120px;
-    height: 80px;
-    opacity: 0.5;
-  }
 }
+
