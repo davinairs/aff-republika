@@ -436,5 +436,23 @@
       </div>
     </section>
   </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      
+      menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+      });
+
+      // Menutup menu saat mengklik di luar menu
+      document.addEventListener('click', function(event) {
+        if (!event.target.closest('.navbar')) {
+          navLinks.classList.remove('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
