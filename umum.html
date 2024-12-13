@@ -1,495 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mobile</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Slider with Captions</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
 </head>
-
 <body>
-  <nav class="navbar">
-    <div class="navbar-top">
-      <a class="navbar-brand" href="#">
-        <img src="/image/logo-republika.png" alt="Republika Logo" />
-      </a>
-      <div class="input-group">
-        <input type="search" class="form-control" placeholder="Temukan Sesuatu..." aria-label="Search" />
-        <button class="btn btn-outline-light" type="button">
-        </button>
+  <div class="slider-container">
+    <div class="slides">
+      <div class="slide">
+        <img src="img/foto-marselino-4.jpg" alt="Image 1">
+        <div class="caption">Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </div>
       </div>
-      <button class="menu-toggle">
-        <i class="bi bi-list"></i>
-      </button>
-    </div>
-    <div class="nav-links">
-      <a class="nav-link" href="#">AMEERA</a>
-      <a class="nav-link" href="#">KHAZANAH</a>
-      <a class="nav-link" href="#">IQRA</a>
-      <a class="nav-link" href="#">NEWS</a>
-      <a class="nav-link" href="#">ANALISIS</a>
-      <a class="nav-link" href="#">EKONOMI</a>
-      <a class="nav-link" href="#">ESGNOW</a>
-      <a class="nav-link" href="#">VISUAL</a>
-      <a class="nav-link" href="#">ENGLISH</a>
-      <a class="nav-link" href="#">REPUBLIKA TV</a>
-      <a class="nav-link" href="#">INDEKS</a>
-    </div>
-  </nav>
-
-  <!-- <section class="header-section">
-    <h2 class="title" style="text-align: center">
-      MITSUBISHI ELECTRIC CUP
-    </h2>
-    <div class="match-schedule">
-      <div class="schedule-container">
-        <div class="match-card">
-          <div class="match-time">11 Des, 18.00 WIB</div>
-          <div class="match-teams">
-            <div class="team">
-              <img src="/image/flag/indonesia.png" alt="Indonesia" class="flag" />
-              <span>Indonesia</span>
-            </div>
-            <div class="team">
-              <img src="/image/flag/myanmar.png" alt="Myanmar" class="flag" />
-              <span>Myanmar</span>
-            </div>
-          </div>
-        </div>
-        <div class="match-card">
-          <div class="match-time">11 Des, 18.00 WIB</div>
-          <div class="match-teams">
-            <div class="team">
-              <img src="/image/flag/laos.png" alt="Indonesia" class="flag" />
-              <span>Laos</span>
-            </div>
-            <div class="team">
-              <img src="/image/flag/vietnam.png" alt="Myanmar" class="flag" />
-              <span>Vietnam</span>
-            </div>
-          </div>
-        </div>
-        <div class="match-card">
-          <div class="match-time">11 Des, 18.00 WIB</div>
-          <div class="match-teams">
-            <div class="team">
-              <img src="/image/flag/indonesia.png" alt="Indonesia" class="flag" />
-              <span>Indonesia</span>
-            </div>
-            <div class="team">
-              <img src="/image/flag/myanmar.png" alt="Myanmar" class="flag" />
-              <span>Myanmar</span>
-            </div>
-          </div>
-        </div>
-        <div class="match-card">
-          <div class="match-time">11 Des, 18.00 WIB</div>
-          <div class="match-teams">
-            <div class="team">
-              <img src="/image/flag/laos.png" alt="Indonesia" class="flag" />
-              <span>Laos</span>
-            </div>
-            <div class="team">
-              <img src="/image/flag/vietnam.png" alt="Myanmar" class="flag" />
-              <span>Vietnam</span>
-            </div>
-          </div>
-        </div>
-        <div class="match-card">
-          <div class="match-time">11 Des, 18.00 WIB</div>
-          <div class="match-teams">
-            <div class="team">
-              <img src="/image/flag/indonesia.png" alt="Indonesia" class="flag" />
-              <span>Indonesia</span>
-            </div>
-            <div class="team">
-              <img src="/image/flag/myanmar.png" alt="Myanmar" class="flag" />
-              <span>Myanmar</span>
-            </div>
-          </div>
-        </div>
-        <div class="match-card">
-          <div class="match-time">11 Des, 18.00 WIB</div>
-          <div class="match-teams">
-            <div class="team">
-              <img src="/image/flag/laos.png" alt="Indonesia" class="flag" />
-              <span>Laos</span>
-            </div>
-            <div class="team">
-              <img src="/image/flag/vietnam.png" alt="Myanmar" class="flag" />
-              <span>Vietnam</span>
-            </div>
-          </div>
-        </div>
-        <div class="match-card">
-          <div class="match-time">11 Des, 18.00 WIB</div>
-          <div class="match-teams">
-            <div class="team">
-              <img src="/image/flag/indonesia.png" alt="Indonesia" class="flag" />
-              <span>Indonesia</span>
-            </div>
-            <div class="team">
-              <img src="/image/flag/myanmar.png" alt="Myanmar" class="flag" />
-              <span>Myanmar</span>
-            </div>
-          </div>
-        </div>
-        <div class="match-card">
-          <div class="match-time">11 Des, 18.00 WIB</div>
-          <div class="match-teams">
-            <div class="team">
-              <img src="/image/flag/laos.png" alt="Indonesia" class="flag" />
-              <span>Laos</span>
-            </div>
-            <div class="team">
-              <img src="/image/flag/vietnam.png" alt="Myanmar" class="flag" />
-              <span>Vietnam</span>
-            </div>
-          </div>
-        </div>
+      <div class="slide">
+        <img src="img/foto-marselino-4.jpg" alt="Image 2">
+        <div class="caption">Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </div>
+      </div>
+      <div class="slide">
+        <img src="img/foto-marselino-4.jpg" alt="Image 3">
+        <div class="caption">Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </div>
+      </div>
+      <div class="slide">
+        <img src="img/foto-marselino-4.jpg" alt="Image 4">
+        <div class="caption">Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </div>
+      </div>
+      <div class="slide">
+        <img src="img/foto-marselino-4.jpg" alt="Image 5">
+        <div class="caption">Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </div>
       </div>
     </div>
-  </section> -->
-
-  <main class="main-container">
-    <section class="slider-section">
-      <div class="slider-wrapper">
-        <div class="slider-item active">
-          <img src="image/foto-berita.jpg" alt="Berita">
-          <div class="slider-caption">
-            <p>Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor.</p>
-          </div>
-        </div>
-        <div class="slider-item">
-          <img src="image/foto-berita.jpg" alt="Berita">
-          <div class="slider-caption">
-            <p>Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor.</p>
-          </div>
-        </div>
-        <div class="slider-item">
-          <img src="image/foto-berita.jpg" alt="Berita">
-          <div class="slider-caption">
-            <p>Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor.</p>
-          </div>
-        </div>
+    <div class="dots">
+      <span class="dot active" onclick="moveToSlide(0)"></span>
+      <span class="dot" onclick="moveToSlide(1)"></span>
+      <span class="dot" onclick="moveToSlide(2)"></span>
+      <span class="dot" onclick="moveToSlide(3)"></span>
+      <span class="dot" onclick="moveToSlide(4)"></span>
+    </div>
+  </div>
+  <div class="container">
+    <div class="ads-box">
+      <p>ads</p>
+    </div>
+  </div>
+  <div class="title-container">
+    <div class="line"></div>
+    <div class="title">Trending</div>
+    <div class="line"></div>
+  </div>
+  <section class="trending">
+    <div class="news-wrapper">
+      <div class="news-box">
+        <img src="img/foto-marselino-4.jpg" alt="Berita 1" class="news-image">
+        <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
       </div>
-      <div class="slider-navigation">
-        <div class="slider-dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-        </div>
+      <div class="news-box">
+        <img src="img/foto-marselino-4.jpg" alt="Berita 2" class="news-image">
+        <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
       </div>
-    </section>
-
-    <!-- <section class="standings">
-      <h2 class="title" style="text-align: left">
-        KLASEMEN
-      </h2>
-      <div class="standings-container">
-        <div class="standings-group">
-          <table class="standings-table">
-            <thead>
-              <tr>
-                <th></th>
-                <th>MP</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>GF</th>
-                <th>GA</th>
-                <th>GD</th>
-                <th>PTS</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="team-info">
-                  <img src="/image/flag/thailand.png" alt="Thailand" class="flag">
-                  <span>Thailand</span>
-                </td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td>0</td>
-                <td>10</td>
-                <td>0</td>
-                <td>+10</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td class="team-info">
-                  <img src="/image/flag/cambodia.png" alt="Kamboja" class="flag">
-                  <span>Kamboja</span>
-                </td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td>0</td>
-                <td>10</td>
-                <td>0</td>
-                <td>+10</td>
-                <td>3</td>
-              </tr>
-              <tr></tr>
-              <td class="team-info">
-                <img src="/image/flag/malaysia.png" alt="Malaysia" class="flag">
-                <span>Malaysia</span>
-              </td>
-              <td>1</td>
-              <td>1</td>
-              <td>0</td>
-              <td>0</td>
-              <td>10</td>
-              <td>0</td>
-              <td>+10</td>
-              <td>3</td>
-              </tr>
-              <tr></tr>
-              <td class="team-info">
-                <img src="/image/flag/singapore.png" alt="Singapura" class="flag">
-                <span>Singapura</span>
-              </td>
-              <td>1</td>
-              <td>1</td>
-              <td>0</td>
-              <td>0</td>
-              <td>10</td>
-              <td>0</td>
-              <td>+10</td>
-              <td>3</td>
-              </tr>
-              <tr></tr>
-              <td class="team-info">
-                <img src="/image/flag/east-timor.png" alt="Timor Leste" class="flag">
-                <span>Timor Leste</span>
-              </td>
-              <td>1</td>
-              <td>1</td>
-              <td>0</td>
-              <td>0</td>
-              <td>10</td>
-              <td>0</td>
-              <td>+10</td>
-              <td>3</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="standings-group">
-          <table class="standings-table">
-            <thead>
-              <tr>
-                <th></th>
-                <th>MP</th>
-                <th>W</th>
-                <th>D</th>
-                <th>L</th>
-                <th>GF</th>
-                <th>GA</th>
-                <th>GD</th>
-                <th>PTS</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="team-info">
-                  <img src="/image/flag/indonesia.png" alt="Indonesia" class="flag">
-                  <span>Indonesia</span>
-                </td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td>0</td>
-                <td>10</td>
-                <td>0</td>
-                <td>+10</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td class="team-info">
-                  <img src="/image/flag/laos.png" alt="Laos" class="flag">
-                  <span>Laos</span>
-                </td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td>0</td>
-                <td>10</td>
-                <td>0</td>
-                <td>+10</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td class="team-info">
-                  <img src="/image/flag/myanmar.png" alt="Myanmar" class="flag">
-                  <span>Myanmar</span>
-                </td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td>0</td>
-                <td>10</td>
-                <td>0</td>
-                <td>+10</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td class="team-info">
-                  <img src="/image/flag/philippines.png" alt="Filipina" class="flag">
-                  <span>Filipina</span>
-                </td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td>0</td>
-                <td>10</td>
-                <td>0</td>
-                <td>+10</td>
-                <td>3</td>
-              </tr>
-              <tr>
-                <td class="team-info">
-                  <img src="/image/flag/vietnam.png" alt="Vietnam" class="flag">
-                  <span>Vietnam</span>
-                </td>
-                <td>1</td>
-                <td>1</td>
-                <td>0</td>
-                <td>0</td>
-                <td>10</td>
-                <td>0</td>
-                <td>+10</td>
-                <td>3</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <div class="news-box">
+        <img src="img/foto-marselino-4.jpg" alt="Berita 3" class="news-image">
+        <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
       </div>
-    </section> -->
+      <div class="news-box">
+        <img src="img/foto-marselino-4.jpg" alt="Berita 4" class="news-image">
+        <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+      </div>
+      <div class="news-box">
+        <img src="img/foto-marselino-4.jpg" alt="Berita 1" class="news-image">
+        <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+      </div>
+      <div class="news-box">
+        <img src="img/foto-marselino-4.jpg" alt="Berita 2" class="news-image">
+        <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+      </div>
+      <div class="news-box">
+        <img src="img/foto-marselino-4.jpg" alt="Berita 3" class="news-image">
+        <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+      </div>
+      <div class="news-box">
+        <img src="img/foto-marselino-4.jpg" alt="Berita 4" class="news-image">
+        <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+      </div>
+    </div>
+  </section>
 
-    <section class="visual">
-      <h2 class="title" style="text-align: left">
-        VISUAL
-      </h2>
-      <div class="visual-wrapper">
-        <img src="image/visual/foto-marselino-1.jpg" alt="Berita" class="visual-image">
-        <p class="deskripsi">
+  <div class="title-container">
+    <div class="line"></div>
+    <div class="title">Newest</div>
+    <div class="line"></div>
+  </div>
+  <section class="news">
+    <div class="news-container">
+      <img src="img/foto-marselino-4.jpg" alt="Berita" class="news-img">
+      <div class="news-content">
+        <div class="news-upload">
+          2 jam yang lalu
+        </div>
+        <h5 class="news-titles">
           Lorem ipsum dolor sit amet consectetur.
-          Condimentum tincidunt nec sem eget suspendisse.
-          Neque sapien et mollis nunc risus et rhoncus id.
-        </p>
-        <div class="slider">
-          <img src="image/visual/foto-marselino-1.jpg" alt="Gambar 1" class="slide-image">
-          <img src="image/visual/foto-marselino-2.jpg" alt="Gambar 2" class="slide-image">
-          <img src="image/visual/foto-marselino-3.jpg" alt="Gambar 3" class="slide-image">
-          <img src="image/visual/foto-marselino-4.jpg" alt="Gambar 4" class="slide-image">
-          <img src="image/visual/foto-marselino-1.jpg" alt="Gambar 1" class="slide-image">
-          <img src="image/visual/foto-marselino-2.jpg" alt="Gambar 2" class="slide-image">
-          <img src="image/visual/foto-marselino-3.jpg" alt="Gambar 3" class="slide-image">
-          <img src="image/visual/foto-marselino-4.jpg" alt="Gambar 4" class="slide-image">
-        </div>
-      </div>
-      <div class="ads-box">
-      </div>
-    </section>
+          Ullamcorper enim non ut nulla risus dis tortor.
 
-    <section class="news">
-      <h2 class="title" style="text-align: left">
-        NEWEST
-      </h2>
-      <div class="news-container">
-        <img src="image/foto-berita.jpg" alt="Berita" class="news-img">
-        <div class="news-content">
-          <div class="news-upload">
-            2 jam yang lalu
-          </div>
-          <h5 class="news-title">
-            Lorem ipsum dolor sit amet consectetur.
-            Ullamcorper enim non ut nulla risus dis tortor.
-
-          </h5>
-        </div>
+        </h5>
       </div>
-      <div class="news-container">
-        <img src="image/foto-berita.jpg" alt="Berita" class="news-img">
-        <div class="news-content">
-          <div class="news-upload">
-            2 jam yang lalu
-          </div>
-          <h5 class="news-title">
-            Lorem ipsum dolor sit amet consectetur.
-            Ullamcorper enim non ut nulla risus dis tortor.
+    </div>
+    <div class="news-container">
+      <img src="img/foto-marselino-4.jpg" alt="Berita" class="news-img">
+      <div class="news-content">
+        <div class="news-upload">
+          2 jam yang lalu
+        </div>
+        <h5 class="news-titles">
+          Lorem ipsum dolor sit amet consectetur.
+          Ullamcorper enim non ut nulla risus dis tortor.
 
-          </h5>
-        </div>
+        </h5>
       </div>
-      <div class="news-container">
-        <img src="image/foto-berita.jpg" alt="Berita" class="news-img">
-        <div class="news-content">
-          <div class="news-upload">
-            2 jam yang lalu
-          </div>
-          <h5 class="news-title">
-            Lorem ipsum dolor sit amet consectetur.
-            Ullamcorper enim non ut nulla risus dis tortor.
+    </div>
+    <div class="news-container">
+      <img src="img/foto-marselino-4.jpg" alt="Berita" class="news-img">
+      <div class="news-content">
+        <div class="news-upload">
+          2 jam yang lalu
+        </div>
+        <h5 class="news-titles">
+          Lorem ipsum dolor sit amet consectetur.
+          Ullamcorper enim non ut nulla risus dis tortor.
 
-          </h5>
-        </div>
+        </h5>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="trending">
-      <h2 class="title" style="text-align: left">
-        TRENDING
-      </h2>
-      <div class="news-wrapper">
-        <div class="news-box">
-          <img src="image/foto-berita.jpg" alt="Berita 1" class="news-image">
-          <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-        </div>
-        <div class="news-box">
-          <img src="image/foto-berita.jpg" alt="Berita 2" class="news-image">
-          <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-        </div>
-        <div class="news-box">
-          <img src="image/foto-berita.jpg" alt="Berita 3" class="news-image">
-          <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-        </div>
-        <div class="news-box">
-          <img src="image/foto-berita.jpg" alt="Berita 4" class="news-image">
-          <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-        </div>
+  <div class="title-container">
+    <div class="line"></div>
+    <div class="title">Terkini</div>
+    <div class="line"></div>
+  </div>
+  <div class="container-terkini">
+    <!-- Bagian Kiri - Foto Besar dan Judul -->
+    <div class="left-side">
+      <div class="big-photo">
+        <img src="img/foto-marselino-4.jpg" alt="Foto Besar">
       </div>
-    </section>
-  </main>
+      <div class="big-photo-title">
+        <h2>Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </h2>
+      </div>
+    </div>
+
+    <!-- Bagian Kanan - 3 Kotak Foto Kecil dan Judul -->
+    <div class="right-side">
+      <div class="small-photo">
+        <img src="img/foto-marselino-4.jpg" alt="Foto Kecil 1">
+        <h3>Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </h3>
+      </div>
+      <div class="small-photo">
+        <img src="img/foto-marselino-4.jpg" alt="Foto Kecil 2">
+        <h3>Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </h3>
+      </div>
+      <div class="small-photo">
+        <img src="img/foto-marselino-4.jpg" alt="Foto Kecil 3">
+        <h3>Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </h3>
+      </div>
+    </div>
+  </div>
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelector(".slides");
+    const dots = document.querySelectorAll(".dot");
+
+    function moveToSlide(index) {
+      currentSlide = index;
+      updateSlider();
+    }
+
+    function updateSlider() {
+      const slideWidth = document.querySelector(".slide").clientWidth;
+      slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === currentSlide);
+      });
+    }
+
+    // Optional: Auto slide
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % dots.length;
+      updateSlider();
+    }, 3000);
+  </script>
 </body>
-</html>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuToggle.addEventListener('click', function () {
-      navLinks.classList.toggle('active');
-    });
-
-    // Menutup menu saat mengklik di luar menu
-    document.addEventListener('click', function (event) {
-      if (!event.target.closest('.navbar')) {
-        navLinks.classList.remove('active');
-      }
-    });
-  });
-</script>
-</body>
-
 </html>
