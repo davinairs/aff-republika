@@ -1,0 +1,130 @@
+(function() {
+    const ENDPOINT = 'https://tonton.republika.co.id/api/collect';
+    let lastScrollDepth = 0;
+    let startTime = Date.now();
+    let isPageActive = true;
+    
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+    }
+
+    function setBrowserId() {
+        let bid = getCookie('analytics_bid');
+        if (!bid) {
+            bid = 'bid_' + Math.random().toString(36).substr(2, 9);
+            document.cookie = `analytics_bid=${bid};domain=${window.location.hostname};path=/;max-age=31536000`;
+        }
+        return bid;
+    }
+
+    function getMetaKeywords() {
+        const metaKeywords = document.querySelector('meta[name="keywords"]');
+        if (!metaKeywords) return [];
+        try {
+            return metaKeywords.content.split(',').map(k => k.trim());
+        } catch {
+            return [];
+        }
+    }
+
+    function getDataLayer() {
+        if (window.dataLayer && window.dataLayer[0]) {
+            const dl = window.dataLayer[0];
+            return {
+                kanal: dl.kanal || '',
+                subkanal: dl.subkanal || '',
+                redaktur: dl.redaktur || '',
+                reporter: dl.reporter || '',
+                upload_date: dl.upload_date || '',
+                host: window.location.hostname,
+                viewer_id: dl.viewer_id || null,
+                event: dl.event || '',
+                'gtm.uniqueEventId': dl['gtm.uniqueEventId'] || null
+            };
+        }
+        return {
+            kanal: '',
+            subkanal: '',
+            redaktur: '',
+            reporter: '',
+            upload_date: '',
+            host: window.location.hostname,
+            viewer_id: null,
+            event: '',
+            'gtm.uniqueEventId': null
+        };
+    }
+
+    async function sendEvent(eventType) {
+        const event = {
+            url: window.location.href,
+            title: document.title,
+            browser_id: setBrowserId(),
+            session_id: sessionStorage.getItem('analytics_sid') || 'sid_' + Math.random().toString(36).substr(2, 9),
+            timestamp: new Date().toISOString(),
+            referrer: document.referrer,
+            user_agent: navigator.userAgent,
+            event_type: eventType,
+            meta_keywords: getMetaKeywords(),
+            datalayer: getDataLayer(),
+            viewport_width: window.innerWidth || 0,
+            viewport_height: window.innerHeight || 0,
+            scroll_depth: lastScrollDepth,
+            time_on_page: Math.max(0, (Date.now() - startTime) / 1000)
+        };
+
+        try {
+            const response = await fetch(ENDPOINT, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(event),
+                keepalive: true
+            });
+
+            if (!response.ok) {
+                console.error('Analytics error:', response.status);
+            }
+        } catch (error) {
+            console.error('Analytics error:', error);
+        }
+    }
+
+    // Initialize tracking
+    sessionStorage.setItem('analytics_sid', 'sid_' + Math.random().toString(36).substr(2, 9));
+    sendEvent('pageview');
+
+    // Track scroll depth
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        if (scrollTimeout) clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(() => {
+            const winHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight;
+            const scrollTop = window.scrollY;
+            lastScrollDepth = Math.round((scrollTop + winHeight) / docHeight * 100);
+        }, 100);
+    });
+
+    // Heartbeat with throttling
+    let lastPing = Date.now();
+    setInterval(() => {
+        if (isPageActive && Date.now() - lastPing >= 10000) {
+            sendEvent('ping');
+            lastPing = Date.now();
+        }
+    }, 10000);
+
+    // Track visibility changes
+    document.addEventListener('visibilitychange', () => {
+        isPageActive = document.visibilityState === 'visible';
+    });
+
+    // Track page exit
+    window.addEventListener('beforeunload', () => {
+        sendEvent('exit');
+    });
+})();
