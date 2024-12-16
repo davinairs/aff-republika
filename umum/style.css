@@ -174,8 +174,8 @@
   .container-terkini {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
+    padding:  10px 0 0 0;
+    gap: 3px;
   }
   
   .left-side {
@@ -183,35 +183,40 @@
   }
   
   .big-photo img {
-    width: 70%; /* Membuat gambar foto besar mengikuti lebar kontainer */
-    height: 50%;
-    border-radius: 8px;
+    width: 650px; 
+    height: 450px;
+    border-radius: 10px;
+    object-fit: cover;
   }
   
   .big-photo-title h2 {
-    width: 60%;
+    width: 80%;
     margin-top: 10px;
     font-size: 24px;
   }
   
   .right-side {
-    width: 30%; /* Menentukan lebar bagian kanan */
+    width: 35%; 
   }
   
   .small-photo {
-    margin-bottom: 20px; /* Jarak antar kotak foto kecil */
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    margin-bottom: 10px;
   }
   
   .small-photo img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    width: 150px; 
+    height: 150px;
+    border-radius: 5px;
+    object-fit: cover;
   }
   
   .small-photo h3 {
-    margin-top: 10px;
-    text-align: center;
-    font-size: 18px;
+    margin: 0; 
+    font-size: px; 
+    line-height: 1.2;
+    color: #333; 
   }
-  
   
