@@ -3,190 +3,170 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Slider with Captions</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Document</title>
 </head>
-<body>
-  <div class="slider-container">
-    <div class="slides">
-      <div class="slide">
-        <img src="img/foto-marselino-4.jpg" alt="Image 1">
-        <div class="caption">Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </div>
-      </div>
-      <div class="slide">
-        <img src="img/foto-marselino-4.jpg" alt="Image 2">
-        <div class="caption">Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </div>
-      </div>
-      <div class="slide">
-        <img src="img/foto-marselino-4.jpg" alt="Image 3">
-        <div class="caption">Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </div>
-      </div>
-      <div class="slide">
-        <img src="img/foto-marselino-4.jpg" alt="Image 4">
-        <div class="caption">Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </div>
-      </div>
-      <div class="slide">
-        <img src="img/foto-marselino-4.jpg" alt="Image 5">
-        <div class="caption">Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </div>
-      </div>
-    </div>
-    <div class="dots">
-      <span class="dot active" onclick="moveToSlide(0)"></span>
-      <span class="dot" onclick="moveToSlide(1)"></span>
-      <span class="dot" onclick="moveToSlide(2)"></span>
-      <span class="dot" onclick="moveToSlide(3)"></span>
-      <span class="dot" onclick="moveToSlide(4)"></span>
+<body class="body">
+  <div class="container-black">
+    <div class="tema">
+      <h2>Natal 2024</h2>
     </div>
   </div>
+
+  <div class="container-black-2">
+    <div class="card-1">
+      <div class="card-image">
+        <img src="img/foto-marselino-4.jpg" alt="Card Image">
+      </div>
+      <div class="card-content">
+        <p>Selasa, 17 Desember 2024</p>
+        <h2>Peradilan ditolak, Penetapan Tom Lembong Sebagai tersangka dinyatakan sah</h2>
+        <p>Lorem ipsum dolor sit amet consectetur. Velit ultricies leo dolor ullamcorper arcu egestas et. Tincidunt diam a enim arcu ut at sed. Enim tortor varius neque accumsan. Facilisis phasellus aliquam varius auctor in. Quam et parturient diam cursus. Lacus pellentesque ultrices placerat parturient. Justo tempor tortor eleifend est.</p>
+      </div>
+    </div>
+
+    <div class="card-2">
+      <div class="card-image-2">
+        <img src="img/foto-marselino-4.jpg" alt="Card Image">
+      </div>
+      <div class="card-content-2">
+        <p>Selasa, 17 Desember 2024</p>
+        <h3>Peradilan ditolak, Penetapan Tom Lembong Sebagai tersangka dinyatakan sah</h3>
+        <p>Lorem ipsum dolor sit amet consectetur. Velit ultricies leo dolor ullamcorper arcu egestas et. Tincidunt diam a enim arcu ut at sed. Enim tortor varius neque accumsan. Facilisis phasellus aliquam varius auctor in. Quam et parturient diam cursus. Lacus pellentesque ultrices placerat parturient. Justo tempor tortor eleifend est.</p>
+      </div>
+    </div>
+
+    <div class="card-3">
+      <div class="article">
+        <p>Selasa, 17 Desember 2024</p>
+        <h3>Wapres ancam bunuh, presiden marcos ingatkan supermasi hukum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula ex ut tortor.</p>
+        <hr>
+      </div>
+      <div class="article">
+        <p>Selasa, 17 Desember 2024</p>
+        <h3>Wapres ancam bunuh, presiden marcos ingatkan supermasi hukum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula ex ut tortor.</p>
+        <hr>
+      </div>
+      <div class="article">
+        <p>Selasa, 17 Desember 2024</p>
+        <h3>Wapres ancam bunuh, presiden marcos ingatkan supermasi hukum</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vehicula ex ut tortor.</p>
+        <hr>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
-    <div class="ads-box">
-      <p>ads</p>
+    <!-- Bagian pertama dengan gambar di kiri, judul di kanan -->
+    <div class="card">
+      <div class="card-image-news">
+        <img src="img/foto-marselino-4.jpg" alt="Card Image">
+      </div>
+      <div class="card-content-news">
+        <p>Selasa, 17 Desember 2024</p>
+        <h3>Peradilan ditolak, Penetapan Tom Lembong Sebagai tersangka dinyatakan sah</h3>
+      </div>
+    </div>
+
+    <!-- Bagian kedua dengan gambar di kiri, judul di kanan -->
+    <div class="card">
+      <div class="card-image-news">
+        <img src="img/foto-marselino-4.jpg" alt="Card Image">
+      </div>
+      <div class="card-content-news">
+        <p>Selasa, 17 Desember 2024</p>
+        <h3>Peradilan ditolak, Penetapan Tom Lembong Sebagai tersangka dinyatakan sah</h3>
+      </div>
     </div>
   </div>
-  <div class="title-container">
-    <div class="line"></div>
-    <div class="title">Trending</div>
-    <div class="line"></div>
+
+  <div class="container">
+    <!-- Artikel 1 di bawah -->
+    <div class="card">
+      <div class="card-image-news">
+        <img src="img/foto-marselino-4.jpg" alt="Card Image">
+      </div>
+      <div class="card-content-news">
+        <p>Selasa, 17 Desember 2024</p>
+        <h3>Wapres ancam bunuh, presiden marcos ingatkan supermasi hukum</h3>
+      </div>
+    </div>
+
+    <!-- Artikel 2 di bawah -->
+    <div class="card">
+      <div class="card-image-news">
+        <img src="img/foto-marselino-4.jpg" alt="Card Image">
+      </div>
+      <div class="card-content-news">
+        <p>Selasa, 17 Desember 2024</p>
+        <h3>Wapres ancam bunuh, presiden marcos ingatkan supermasi hukum</h3>
+      </div>
+    </div>
   </div>
-  <section class="trending">
+
+  <div class="container">
+    <!-- Artikel 3 di sampingnya -->
+    <div class="card">
+      <div class="card-image-news">
+        <img src="img/foto-marselino-4.jpg" alt="Card Image">
+      </div>
+      <div class="card-content-news">
+        <p>Selasa, 17 Desember 2024</p>
+        <h3>Wapres ancam bunuh, presiden marcos ingatkan supermasi hukum</h3>
+      </div>
+    </div>
+    <!-- Artikel 4 di sampingnya -->
+    <div class="card">
+      <div class="card-image-news">
+        <img src="img/foto-marselino-4.jpg" alt="Card Image">
+      </div>
+      <div class="card-content-news">
+        <p>Selasa, 17 Desember 2024</p>
+        <h3>Wapres ancam bunuh, presiden marcos ingatkan supermasi hukum</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-rectangle">
+    <p>Advertisement</p>
+    <p>This is an ad space for your advertisement. You can place your banner here.</p>
+  </div>
+
+  <div class="news-container-big">
+    <div class="news-image-big">
+      <img src="img/foto-marselino-4.jpg" alt="Berita" />
+    </div>
+    <div class="news-content-big">
+      <p>Selasa, 17 Desember 2024</p>
+      <h2>Peradilan ditolak, Penetapan Tom Lembong Sebagai tersangka dinyatakan sah</h2>
+      <p>Lorem ipsum dolor sit amet consectetur. Velit ultricies leo dolor ullamcorper arcu egestas et. Tincidunt diam a enim arcu ut at sed. Enim tortor varius neque accumsan. Facilisis phasellus aliquam varius auctor in. Quam et parturient diam cursus. Lacus pellentesque ultrices placerat parturient. Justo tempor tortor eleifend est.</p>
+    </div>
+  </div>
+  <section>
     <div class="news-wrapper">
       <div class="news-box">
         <img src="img/foto-marselino-4.jpg" alt="Berita 1" class="news-image">
+        <p>Selasa, 17 Desember 2024</p>
         <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
       </div>
       <div class="news-box">
         <img src="img/foto-marselino-4.jpg" alt="Berita 2" class="news-image">
+        <p>Selasa, 17 Desember 2024</p>
         <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
       </div>
       <div class="news-box">
         <img src="img/foto-marselino-4.jpg" alt="Berita 3" class="news-image">
+        <p>Selasa, 17 Desember 2024</p>
         <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
       </div>
       <div class="news-box">
         <img src="img/foto-marselino-4.jpg" alt="Berita 4" class="news-image">
+        <p>Selasa, 17 Desember 2024</p>
         <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
       </div>
-      <div class="news-box">
-        <img src="img/foto-marselino-4.jpg" alt="Berita 1" class="news-image">
-        <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-      </div>
-      <div class="news-box">
-        <img src="img/foto-marselino-4.jpg" alt="Berita 2" class="news-image">
-        <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-      </div>
-      <div class="news-box">
-        <img src="img/foto-marselino-4.jpg" alt="Berita 3" class="news-image">
-        <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-      </div>
-      <div class="news-box">
-        <img src="img/foto-marselino-4.jpg" alt="Berita 4" class="news-image">
-        <h3 class="news-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-      </div>
-    </div>
   </section>
-
-  <div class="title-container">
-    <div class="line"></div>
-    <div class="title">Newest</div>
-    <div class="line"></div>
-  </div>
-  <section class="news">
-    <div class="news-container">
-      <img src="img/foto-marselino-4.jpg" alt="Berita" class="news-img">
-      <div class="news-content">
-        <div class="news-upload">
-          2 jam yang lalu
-        </div>
-        <h5 class="news-titles">
-          Lorem ipsum dolor sit amet consectetur.
-          Ullamcorper enim non ut nulla risus dis tortor.
-        </h5>
-      </div>
-    </div>
-    <div class="news-container">
-      <img src="img/foto-marselino-4.jpg" alt="Berita" class="news-img">
-      <div class="news-content">
-        <div class="news-upload">
-          2 jam yang lalu
-        </div>
-        <h5 class="news-titles">
-          Lorem ipsum dolor sit amet consectetur.
-          Ullamcorper enim non ut nulla risus dis tortor.
-
-        </h5>
-      </div>
-    </div>
-    <div class="news-container">
-      <img src="img/foto-marselino-4.jpg" alt="Berita" class="news-img">
-      <div class="news-content">
-        <div class="news-upload">
-          2 jam yang lalu
-        </div>
-        <h5 class="news-titles">
-          Lorem ipsum dolor sit amet consectetur.
-          Ullamcorper enim non ut nulla risus dis tortor.
-
-        </h5>
-      </div>
-    </div>
-  </section>
-
-  <div class="title-container">
-    <div class="line"></div>
-    <div class="title">Terkini</div>
-    <div class="line"></div>
-  </div>
-  <div class="container-terkini">
-    <!-- Bagian Kiri - Foto Besar dan Judul -->
-    <div class="left-side">
-      <div class="big-photo">
-        <img src="img/foto-marselino-4.jpg" alt="Foto Besar">
-      </div>
-      <div class="big-photo-title">
-        <h2>Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </h2>
-      </div>
-    </div>
-
-    <!-- Bagian Kanan - 3 Kotak Foto Kecil dan Judul -->
-    <div class="right-side">
-      <div class="small-photo">
-        <img src="img/foto-marselino-4.jpg" alt="Foto Kecil 1">
-        <h3>Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </h3>
-      </div>
-      <div class="small-photo">
-        <img src="img/foto-marselino-4.jpg" alt="Foto Kecil 2">
-        <h3>Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </h3>
-      </div>
-      <div class="small-photo">
-        <img src="img/foto-marselino-4.jpg" alt="Foto Kecil 3">
-        <h3>Lorem ipsum dolor sit amet consectetur. Ullamcorper enim non ut nulla risus dis tortor. </h3>
-      </div>
-    </div>
-  </div>
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelector(".slides");
-    const dots = document.querySelectorAll(".dot");
-
-    function moveToSlide(index) {
-      currentSlide = index;
-      updateSlider();
-    }
-
-    function updateSlider() {
-      const slideWidth = document.querySelector(".slide").clientWidth;
-      slides.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
-
-      dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === currentSlide);
-      });
-    }
-
-    // Optional: Auto slide
-    setInterval(() => {
-      currentSlide = (currentSlide + 1) % dots.length;
-      updateSlider();
-    }, 3000);
-  </script>
 </body>
 </html>
