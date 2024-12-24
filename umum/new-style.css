@@ -6,14 +6,14 @@
 .new-tema {
   color: white;
   font-family: 'Poppins', sans-serif;
-  padding: 50px 0 0 0;
+  padding: 5px;
 }
 
 .new-container-black-2 {
   background-color: black;
   display: flex;
   gap : 2%;
-  padding: 50px 0;
+  padding: 20px ;
 }
 
 .new-card-1,
@@ -60,27 +60,32 @@
 
 .new-card-content p {
   font-size: 15px;
+  margin-top: 10px;
   color: #555;
 }
 
 .new-card-content-2 h3 {
   font-size: 18px;
+  margin-top: 10px;
   margin-bottom: 10px;
   color: white;
 }
 
 .new-card-content-2 p {
   font-size: 14px;
+  margin-top: 10px;
   color: #555;
 }
 
 .new-article h3 {
   font-size: 18px;
+  margin-bottom: 5px;
   color: white;
 }
 
 .new-article p {
   font-size: 14px;
+  margin-bottom: 5px;
   color: #555;
 }
 
