@@ -1,3 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .hero-wrapper {
   background: #000;
   width: 100%;
@@ -12,8 +17,8 @@
 .new-container-black-2 {
   background-color: black;
   display: flex;
-  gap : 2%;
-  padding: 20px ;
+  gap: 2%;
+  padding: 20px;
 }
 
 .new-card-1,
@@ -157,9 +162,8 @@
 .new-news-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 10px;
   justify-content: space-between;
-  width: 100%;
 }
 
 .new-news-box {
@@ -171,8 +175,8 @@
 }
 
 .new-news-box .new-news-image {
-  width: 252px;
-  height: 149px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   border-radius: 3%;
 }
@@ -183,5 +187,122 @@
 }
 
 .new-news-box p {
-  font-size: 10px;
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .new-tema {
+    font-size: 13px;
+  }
+
+  .new-container-black-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .new-card-1,
+  .new-card-2,
+  .new-card-3 {
+    width: 100%;
+    margin: 0 10px;
+    width: 440px;
+  }
+
+  .new-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .new-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .new-card-image-news img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .new-card-content-news {
+    text-align: left;
+  }
+
+  .new-card-content-news h3 {
+    font-size: 15px;
+    color: #000;
+  }
+
+  .new-card-content-news p {
+    font-size: 12px;
+    color: #555;
+  }
+
+  .new-news-container-big {
+    gap: 10px;
+    margin: 10px;
+    width: 470px;
+  }
+
+  .new-news-image-big img {
+    width: 200px;
+    height: auto;
+  }
+
+  .new-news-content-big {
+    padding: 0px;
+  }
+
+  .new-news-content-big h2 {
+    font-size: 13px;
+    margin-top: 0px;
+  }
+
+  .new-news-content-big p {
+    font-size: 12px;
+  }
+
+  .new-news-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 7px;
+    margin-right: 5px;
+  }
+
+  .new-news-box {
+    width: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    text-align: left;
+  }
+
+  .new-news-box .new-news-image {
+    width: 43%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 3%;
+  }
+
+  .new-news-box .new-news-title {
+    font-size: 17px;
+    color: #000;
+    margin: 10px 0;
+  }
+
+  .new-news-box p {
+    font-size: 12px;
+    color: #555;
+    margin: 5px 0;
+  }
+
 }
